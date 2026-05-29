@@ -14,13 +14,13 @@
     </div>
     <script>
         function verify(){
-            var pais = document.getElementById('is')
+            var pais = document.getElementById('is').value.trim()
             var res = document.getElementById('res')
-            res.innerText = 'Você é ' + pais + ' !'
-            if (pais === 'Brasil') {
+            res.innerText = `Você é do ${pais}!`
+            if (pais.toLowerCase() === 'brasil') {
                 res.innerHTML += `<p>Você é <strong>Brasileiro</strong>!</p>`
             } else {
-                res.innerHTML += `<p>Você é <strong>Estrangeiro</strong></p>`
+                res.innerHTML += `<p>Você é <strong>Estrangeiro</strong>!</p>`
             }
         }
     </script>
